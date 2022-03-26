@@ -1,5 +1,4 @@
 version: "3"
-
 services:
   my-service:
-    image: my-image:v1.1.1
+    image: my-image:v123
