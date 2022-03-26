@@ -6,6 +6,10 @@ on:
 
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+
 jobs:
   docker-release:
     name: Test
@@ -19,8 +23,8 @@ jobs:
         uses: Anthony-Jhoiro/docker-deploy-github-action@feat/action_basic
         with:
           repo: Anthony-Jhoiro/sample-deployments
-          token: ${{ env.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           # ref: 
-          changes: '[{"path": "examples/my-deplyment", "service": "my-service", "image": "my-image:v123"}]'
+          changes: '[{"path": "examples/my-deployment", "service": "my-service", "image": "my-image:v123"}]'
           # slack-webhook
           commit-message: "Hello World"
