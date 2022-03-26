@@ -25,6 +25,6 @@ jobs:
           repo: Anthony-Jhoiro/sample-deployments
           token: ${{ secrets.GITHUB_TOKEN }}
           # ref: 
-          changes: '[{"path": "examples/my-deployment", "service": "my-service", "image": "my-image:v123"}]'
+          changes: '[{"path": "deployment", "service": "my-service", "image": "my-image:v123"}]'
           # slack-webhook
           commit-message: "Hello World"
